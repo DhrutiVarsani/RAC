@@ -23,8 +23,8 @@
   
 </head>
 <body>
-    <header class="header header--2 dark" data-sticky="true">
-        <div class="header__left"><a class="ps-logo" href="{% url 'core:index' %}"><img src="{% static '/img/raclogo1.png' %}" alt=""></a><a class="header__link" href="{% url 'developer_app:browse_job' %}" style="color: lightseagreen;"><i class="fa-duotone fa-books"></i> Browers Jobs</a></div>
+    <header class="header header--2 dark" style="background-color: azure;" data-sticky="true">
+        <div class="header__left"><a class="ps-logo" href="{% url 'core:index' %}"><img src="{% static '/img/raclogo1.png' %}" alt="123" ></a><a class="header__link" href="{% url 'developer_app:browse_job' %}" style="color: lightseagreen;"><i class="fa-duotone fa-books"></i> Browers Jobs</a></div>
         <div class="header__right" >
           <ul class="menu">
             <li class="menu-item-has-children"><a href="{% url 'core:index' %}" style="color: lightseagreen;">Home</a><span class="sub-toggle"></span>
@@ -115,7 +115,7 @@
            {% csrf_token %}
             <div class="ps-form__header">
                 <h3>Sign up for free.</h3>
-                <h5>Join the million of people <br> using R.A.C </h5>
+                <h5>Join the million of people <br> <strong>using Rent a Coder</strong> </h5>
                 <p>I want to</p>
             </div>
             <div class="ps-form__content">
@@ -138,7 +138,7 @@
     </div>
     <div class="ps-page__footer">
         
-        <p>RAC © 2022 Copyright by RAC Co,  All Rights Reserved.</p>
+        <p>RAC © 2023 Copyright by RAC Co,  All Rights Reserved. Develpoed by Dhruti , Mira , Vishwa</p>
     </div>
 </div>
 <div id="back2top"><i class="pe-7s-angle-up"></i></div>
