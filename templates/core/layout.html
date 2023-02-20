@@ -65,15 +65,27 @@
             ><span class="sub-toggle"></span>
           </li>
           <li>
-            <a href="{% url 'developer_app:developer_index' %}">Freelancers</a>
+            <a href="{% url 'developer_app:developer_index' %}">Developer</a>
           </li>
-          <li><a href="{% url 'emp_app:emp_index' %}">Employers</a></li>
+          <li><a href="{% url 'emp_app:emp_index' %}">Client</a></li>
           <li><a href="{% url 'services:about_us' %}">About Us</a></li>
           <li><a href="{% url 'services:services_index' %}">Services</a></li>
 
           <li><a href="{% url 'services:mail' %}">Contact</a></li>
 
           {% if user.is_authenticated %}
+            <li class="menu-item-has-children">
+              <a href="#">Reports</a><span class="sub-toggle"></span>
+              <ul class="sub-menu">
+                <li><a href="{% url 'services:topclient' %}">Top Clients</a></li>
+                <li>
+                  <a href="{% url 'services:topdeveloper' %}">Top Developers</a>
+                </li>
+                <li>
+                  <a href="{% url 'services:topcategory' %}">Top Categories</a>
+                </li>
+              </ul>
+            </li>
           <li class="menu-item-has-children">
             <a href="#">Profile</a><span class="sub-toggle"></span>
             <ul class="sub-menu">
@@ -123,7 +135,7 @@
           </li>
           {% endif %}
 
-          <li class="menu-item-has-children">
+          <!-- <li class="menu-item-has-children">
             <a href="#">Reports</a><span class="sub-toggle"></span>
             <ul class="sub-menu">
               <li><a href="{% url 'services:topclient' %}">Top Clients</a></li>
@@ -134,7 +146,7 @@
                 <a href="{% url 'services:topcategory' %}">Top Categories</a>
               </li>
             </ul>
-          </li>
+          </li> -->
         </ul>
 
         {% if user.is_authenticated %}

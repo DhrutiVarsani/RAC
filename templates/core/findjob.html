@@ -24,25 +24,26 @@
           </div>
 
           <div class="ps-section__content">
-          <figure>
-          <figcaption>Browse top jobs by member</figcaption>
+          
+          <figcaption>Browse top jobs by member</figcaption></br>
 
-        <div class="ps-section__companies">
-            
-            <div class="owl-slider" data-owl-auto="true" data-owl-loop="true" data-owl-speed="7000" data-owl-gap="0"
-                data-owl-nav="false" data-owl-dots="false" data-owl-item="{{count}}" data-owl-item-xs="3" data-owl-item-sm="4"
-                data-owl-item-md="6" data-owl-item-lg="7" data-owl-duration="1000" data-owl-mousedrag="off">
-                {% for client in all_client %}
-
-                <div class="ps-block--company-tiny"><a class="ps-block__thumbnail" href="{% url 'emp_app:pr_client_profile' client.id %}"><img
-                            src="{{client.get_client_image_url}}" alt="" style="height: 70px; width: 70px;"></a><a class="ps-block__title" href="#">
-                        {{client.company_name}}</a></div>
+        <figure>
+            <div class="ps-section__companies">
                 
-                {% endfor %}
-                
+                <div class="owl-slider" data-owl-auto="true" data-owl-loop="true" data-owl-speed="7000" data-owl-gap="0"
+                    data-owl-nav="false" data-owl-dots="false" data-owl-item="{{count}}" data-owl-item-xs="3" data-owl-item-sm="4"
+                    data-owl-item-md="6" data-owl-item-lg="7" data-owl-duration="1000" data-owl-mousedrag="off">
+                    {% for client in all_client %}
 
+                    <div class="ps-block--company-tiny"><a class="ps-block__thumbnail" href="{% url 'emp_app:pr_client_profile' client.id %}"><img
+                                src="{{client.get_client_image_url}}" alt="" style="height: 70px; width: 70px;"></a><a class="ps-block__title" href="#">
+                            {{client.company_name}}</a></div>
+                    
+                    {% endfor %}
+                    
+
+                </div>
             </div>
-        </div>
         </figure>
           </div>
 
